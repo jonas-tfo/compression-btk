@@ -1,6 +1,6 @@
-# Compression-BTK
+# seqshrink - lossless compression for biological sequences
 
-A CLI tool for compressing biological sequence data (FASTA format) using bit-packing tailored to each alphabet type.
+Compress biological sequence data in FASTA format using alphabet specific bit packing.
 
 ## Compression modes
 
@@ -12,7 +12,7 @@ A CLI tool for compressing biological sequence data (FASTA format) using bit-pac
 | `rna3`  | A, C, G, U, N, Gap      | 3           |
 | `prot5` | 20 amino acids, X, Stop | 5           |
 
-Sequence IDs are stored separately and compressed with DEFLATE. The output format uses a custom binary container (`BLOK`).
+Sequence IDs are stored separately and compressed. The output format uses a custom binary container.
 
 ## Usage
 
@@ -30,6 +30,6 @@ Using the `dna3` mode on the genome assembly Avulg\_BH\_1.0 of Armadillidium vul
 
 | File | Size |
 |------|------|
-| Original FASTA | 1.94 GB |
+| Original `.fna` | 1.94 GB |
 | Compressed `.blok` | 736 MB |
 | **Reduction** | **~63%** (2.7× smaller) |

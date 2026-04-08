@@ -24,6 +24,7 @@ pub fn save_fasta_compressed(output_path: &str, mode: u8, ids: Vec<String>, sequ
     let file = File::create(output_path)?;
     let mut writer = BufWriter::new(file);
 
+    // header = 4 + 1 + 4 bytes
     let header = Header { magic: *b"BLOK", mode: mode, num_records: sequences.len() as u32 };
     writer.write_all(&bincode::serialize(&header)?)?;
 
