@@ -1,6 +1,6 @@
 # seqshrink - lossless compression for biological sequences
 
-Compress biological sequence data in FASTA format using alphabet specific bit packing.
+Compression of FASTA-formatted biological sequence data using alphabet specific bit packing.
 
 ## Compression modes
 
